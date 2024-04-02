@@ -8,9 +8,6 @@
 # Cache files
 __pycache__/
 
-# User-specific files
-public/examples/
-
 # Miscellaneous files
 .DS_Store
 Desktop.ini

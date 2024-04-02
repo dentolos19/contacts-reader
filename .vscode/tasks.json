@@ -1,10 +1,14 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "setup",
-            "type": "process",
-            "command": "./setup.bat",
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "setup",
+      "command": "${workspaceFolder}/setup.bat",
+      "presentation": {
+        "reveal": "silent",
+        "clear": true,
+        "showReuseMessage": false
+      }
+    }
+  ]
 }

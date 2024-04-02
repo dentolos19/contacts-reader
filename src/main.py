@@ -1,17 +1,16 @@
-import csv
+from formats.google import read_google_contacts
 
-from formats.google import GoogleContact
-
-contacts: list[GoogleContact] = []
-
-with open("public/contacts.csv", newline='') as csvfile:
-    reader = csv.reader(csvfile)
-    headers = next(reader)
-    for row in reader:
-        contacts.append(GoogleContact(row, headers))
+contacts = read_google_contacts("public/test.csv")
 
 for contact in contacts:
-    print(contact.name)
-    print(contact.emails)
-    print(contact.phone_numbers)
-    print()
+    print("=====================================")
+    print("Name: " + contact.name)
+    print("Emails:")
+    for data in contact.emails:
+        print(f"- {data[1]} ({data[0]})")
+    print("Phone Numbers:")
+    for data in contact.phone_numbers:
+        print(f"- {data[1]} ({data[0]})")
+    print("Groups:")
+    for group in contact.groups:
+        print(f"- {group}")
