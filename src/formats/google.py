@@ -8,6 +8,9 @@ class GoogleContact:
         self.given_name = row[1]
         self.family_name = row[3]
         self.birthday = row[14]
+        self.gender = row[15]
+        self.notes = row[25]
+        self.photo = row[27]
         self.groups = row[28].split(" ::: ")
         # After column 35, the data is dynamic. So we need the headers to identify what kind it is.
         dynamic_data = row[28:] # Gets values after 28th index

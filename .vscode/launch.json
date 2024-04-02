@@ -6,8 +6,11 @@
       "type": "debugpy",
       "request": "launch",
       "preLaunchTask": "setup",
-      "program": "${workspaceFolder}/src/main.py",
       "console": "integratedTerminal",
+      "program": "${workspaceFolder}/src/main.py",
+      "args": [
+        "public/test.csv"
+      ]
     }
   ]
 }
