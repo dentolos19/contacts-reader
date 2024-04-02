@@ -8,9 +8,7 @@
       "preLaunchTask": "setup",
       "console": "integratedTerminal",
       "program": "${workspaceFolder}/src/main.py",
-      "args": [
-        "public/test.csv"
-      ]
+      "args": ["public/examples/google.csv"]
     }
   ]
 }

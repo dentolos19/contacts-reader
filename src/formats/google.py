@@ -1,5 +1,6 @@
 import csv
 import re
+from pathlib import Path
 
 
 class GoogleContact:
@@ -49,9 +50,11 @@ class GoogleContact:
             # TODO: Handle address columns
             # TODO: Handle organization columns
 
-def read_google_contacts(file_path: str):
+def read_google_contacts(path: Path):
+    if not path.exists() or not path.is_file():
+        raise FileNotFoundError(f"This file is invalid: {path}")
     contacts: list[GoogleContact] = []
-    with open(file_path, newline='') as file:
+    with open(path, newline='') as file:
         reader = csv.reader(file)
         headers = next(reader)
         for row in reader:
