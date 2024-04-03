@@ -1,6 +1,6 @@
 <h1>
     <img src="public/icon.png" alt="Icon" height="30">
-    <span>Contacts Reader</span>
+    <span>Contacts Reader (WIP)</span>
 </h1>
 
 A simple tool for reading contact information in CSVs! (incl. Google Contacts)
